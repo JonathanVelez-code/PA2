@@ -25,6 +25,7 @@ The solution is one of the better in efficiency but is still considered slow bec
 I selected the second strategy, there are pros and cons for each strategy but the second one made more sense to me for this assignment. The benefit is guests can see if the showroom is available before attempting to enter. Also, prevent large crowds of guests from gathering around the door. Finally, guests have some control over when they can see the vase. some of the cons are requiring guests to wait for the showroom to become available, but this can't be avoided in any of the given strategies. Possibly not all guests have visited the showroom but this problem focuses more on the gathering around the vase and accidentally breaking it than if everyone has visited. However, I have tested the program and only a few times seen that not all the guest has visited. 
 
 ## Experimental Evaluation
-
+The first strategy is considered the worst out of all the strategies because leads to a large crowd of guests gathering around the door, which may make it difficult to enter and might cause more than two people to enter by accident. Also, no guarantee that a guest will be able to see the vase when they want to. Finally, guests may have to wait a long time to view the vase.
+The third strategy ensures that guests can see the vase in an orderly manner.  Guests know when it is their turn to enter the showroom, but each thread will not be in order, so you will have to wait to see if all the guests view the vase even though a thread can re-enter the queue.
 
 ## Efficiency
