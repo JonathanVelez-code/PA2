@@ -29,3 +29,4 @@ The first strategy is considered the worst out of all the strategies because lea
 The third strategy ensures that guests can see the vase in an orderly manner.  Guests know when it is their turn to enter the showroom, but each thread will not be in order, so you will have to wait to see if all the guests view the vase even though a thread can re-enter the queue.
 
 ## Efficiency
+N threads are to be created and an empty unordered set is to be used to keep track of which threads have already viewed the vase. O(n) in the worst-case scenario where all 100 guests want to visit but only have 400 times to make that happen.
