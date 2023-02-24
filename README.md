@@ -22,7 +22,7 @@ The solution is one of the better in efficiency but is still considered slow bec
 # Minotaur’s Crystal Vase
 
 ## Proof of Correctness
-
+I selected the second strategy, there are pros and cons for each strategy but the second one made more sense to me for this assignment. The benefit is guests can see if the showroom is available before attempting to enter. Also, prevent large crowds of guests from gathering around the door. Finally, guests have some control over when they can see the vase. some of the cons are requiring guests to wait for the showroom to become available, but this can't be avoided in any of the given strategies. Possibly not all guests have visited the showroom but this problem focuses more on the gathering around the vase and accidentally breaking it than if everyone has visited. However, I have tested the program and only a few times seem that not all the guest has visited. 
 
 ## Experimental Evaluation
 
