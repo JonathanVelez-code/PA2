@@ -4,7 +4,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class vase {
     private static final Lock lock = new ReentrantLock();
-    private static final int guestVisit = 500;
+    private static final int guestVisit = 400;
     private static final int guestList = 100;
     private static boolean busy = false;
 
@@ -31,17 +31,16 @@ public class vase {
             thread.join();
         }
 
-        for (int i = 0; i < guestList; i++) {
-            System.out.println("Guest: " + i + " = " + enteredList[i]);
-        }
     }
 
     private static void enterRoom(int guestId, boolean[] enteredList) throws InterruptedException {
+        Random rand = new Random(System.currentTimeMillis());
+        int randSleep = rand.nextInt(guestList);
         lock.lock();
-        if (!busy && !enteredList[guestId]) {
+        if (!busy) {
             busy = true;
             System.out.println("view the vase by guest: " + guestId );
-            Thread.sleep(100);
+            Thread.sleep(randSleep);
             enteredList[guestId] = true;
             System.out.println("guest: " + guestId + " is about to step out of the room.");
             busy = false;
